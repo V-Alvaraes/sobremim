@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+:root {
+    --cor-primaria: #000000;
+    --cor-secundaria: #F6F6F6;
+    --cor-terciaria: #22D4FD;
+    --cor-hover: #272727;
+
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* height: 100vh; (codigo comentado para não perder o que tinha anteriormente. Agora, com as novas inclusões n faz sentido mais esse código) */ /* define o tamanho da classe que está dentro, no casso "100vh" é 100% da tela, atentar quando colocar o Head e o Footer, pois o CSS não vai considerar isso, ao colocar um dos dois, ficarão aciba ou abaixo da tela, tornando a página Scroolavel */
+    box-sizing: border-box;
+    background-color: var(--cor-primaria); /* Define a cor de fundo do botão */
+    color: var(--cor-secundaria);
+}
+
+.cabecalho {
+    padding: 2% 0% 0% 15%;  /* Essas percentagens definem o tamanho de cada lado quando se coloca 4 variáveis, sendo nessa ordem encima, em baixo, direita e esquerda */
+}
+
+.cabecalho__menu{
+    display: flex;
+    gap: 80px
+}
+
+.cabecalho__menu__link {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+   
+}
+
+.apresentacao {
+    /* margin: 10% 18%; (comentado para n perder o código, uma vez que agora, com as novas inclusões da página, foi substituido pelo padding abaixo) /* define a margem em % da tela (usar % pois isso considera diferentes monitores co diferentes resoluções */
+    padding: 6.75% 15% 9.75% 15%; /* uma forma melhor de colocar margem quando se tem mais elementos como footer ou Head, substituiu o margin acima */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.apresentacao__conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+} 
+
+.apresentacao__conteudo__titulo {
+    font-size: 2.25rem; /* define o tamanho da fonte */
+    font-family: var(--fonte-primaria);
+}
+
+.destaque-titulo {
+    color: var(--cor-terciaria);
+}
+
+.apresentacao__conteudo__paragrafo {
+    font-size: 1.5rem; /* define o tamanho da fonte */
+    font-family: var(--fonte-secundaria); /* define qual a fonte será utilizado na escrita */
+}
+
+.apresentacao__links {
+    display: flex;
+    flex-direction: column; /* define como será organizado todos os itens dessa classe (coluna, linha e etc) */
+    align-items: center; /* define a organização dos itens, center fica no centro do elemento */
+    justify-content: space-between; /* define a separação dos elementos */
+    gap: 32px; /* define a separação entre os itens em Pixel */
+}
+
+.apresentacao__links__subtitulo{
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.apresentacao__links_link {
+      /* Define a cor de fundo do botão (classe Apresentacao__links__link) (cor antiga background-color: #22D4FD;  */
+    display:flex; /* Adiciona uma forma específica com muito mais ferramentas de edição para o elemento da classe selecionada (os elementos de organização abaixo serão ignorados)*/
+    justify-content: center; /* define a separação dos elementos */
+    gap: 16px; /* define a separação entre os itens em Pixel */
+    width: 50%;  /* Define o tamanho do Botão */
+    text-align: center; /* define se o texto dentro do botão será centralizado */
+    border-radius: 7px; /* define a borda do botão */
+    border: 2px solid var(--cor-terciaria);
+    font-size: 1.5rem; /* define o tamanho da fonte */
+    font-weight: 600; /* define o "peso" da fonte (encontrado no google fonts) */
+    padding: 21.5px 0px;
+    text-decoration: none; /* Retira o sublinhado e a cor azul do HTML ao criar uma âncoca (link) */
+    color: var(--cor-secundaria); /* Define a cor da escrita do botão */
+    font-family: var(--fonte-secundaria); /* define qual a fonte será utilizado na escrita */
+
+}
+
+.apresentacao__imagem {
+    width: 50%;
+}
+
+.apresentacao__links_link:hover {  /* Essa propriedade "hover" é responsável pela mudança no elemento quando o mouse passa por cima, ou seja, sem mouse vale o de cima, quando passar o mouse, a propriedade dessa será usada */
+    background-color: var(--cor-hover); /* muda a cor do fundo do botão quando passa o mouse encima (por conta do "hover" que está estilizando a classe "apresentacao__links__link") */
+}
+
+.rodape {
+    color:var(--cor-primaria);
+    background-color: var(--cor-terciaria); /* Define a cor de fundo do botão */
+    padding: 30px; /* Aumenta o tamanho do background considerando as cores do próprio background */
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.sobremim {
+    /* margin: 10% 18%; (comentado para n perder o código, uma vez que agora, com as novas inclusões da página, foi substituido pelo padding abaixo) /* define a margem em % da tela (usar % pois isso considera diferentes monitores co diferentes resoluções */
+    padding: 6.75% 15% 9.75% 15%; /* uma forma melhor de colocar margem quando se tem mais elementos como footer ou Head, substituiu o margin acima */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sobremim__conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.sobremim__conteudo__titulo {
+    font-size: 2.25rem; /* define o tamanho da fonte */
+    font-family: var(--fonte-primaria);
+}
+
+.sobremim__conteudo__paragrafo {
+    font-size: 1.5rem; /* define o tamanho da fonte */
+    font-family: var(--fonte-secundaria); /* define qual a fonte será utilizado na escrita */
+}
+
+.curriculo {
+    padding: 5% 0% 0% 15%; /* uma forma melhor de colocar margem quando se tem mais elementos como footer ou Head, substituiu o margin acima */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column; 
+}
+
+.curriculo__titulo {
+    font-size: 2.25rem;
+    font-family: var(--fonte-secundaria);
+    width: 100hv;
+    display: flex;
+    flex-direction: column;
+    padding: 3% 0% 3% 0%;
+    
+}
+
+.curriculo__dados {
+    width: 615px;
+    display: flex;
+    flex-direction: column;
+    padding: 0.4% 0% 0% 3%;
+    
+} 
+
+@media (max-width: 1200px) {
+    .cabecalho {
+        padding: 10%;
+    }
+
+    .cabecalho__menu {
+        justify-content: center;
+    }
+   
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    
+    .apresentacao__conteudo {
+        width: auto;
+    }
+
+    .sobremim__conteudo {
+        width: auto;
+    }
+
+    .curriculo {
+        width: auto;
+    }
+
+    .sobremim {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+}
